@@ -1,0 +1,22 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local generated files
+*.tmp
+*.log
+
+# Source/build artifacts should not be added to this overview repository
+build/
+Debug/
+Release/
+*.elf
+*.hex
+*.bin
+*.map
+*.zip
+*.7z
+*.tar
+*.tar.gz
