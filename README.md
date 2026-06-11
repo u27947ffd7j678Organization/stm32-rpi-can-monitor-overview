@@ -30,6 +30,10 @@ flowchart LR
   CSV --> PC["PC CSV Viewer"]
 ```
 
+## 簡易構成図
+
+![CANセンサー監視システム 簡易構成図](docs/images/system_simple_overview.png)
+
 ## 実機と機器構成
 
 ![機器構成写真](docs/images/hardware_components_labeled.png)
