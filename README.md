@@ -21,13 +21,12 @@ Raspberry Pi側ではQtアプリによる実機画面表示、CSVログ保存、
 
 ```mermaid
 flowchart LR
-  Sensor["SHT31 / Potentiometer / LED"] --> STM32["STM32 NUCLEO"]
-  STM32 -->|"CAN 2.0B"| Canable["CANable 2.0"]
-  Canable --> RPI["Raspberry Pi 5"]
-  RPI --> Qt["Qt Monitor"]
-  RPI --> CSV["CSV Logs"]
-  CSV --> Web["Django Web Monitor"]
-  CSV --> PC["PC CSV Viewer"]
+  STM32["STM32F446RE<br/>Firmware"] -->|"CAN 500 kbps"| CAN["CAN Bus"]
+  CAN --> RPI["Raspberry Pi 5<br/>Qt Monitor"]
+  RPI -->|"QProcess / stdin pipe"| LOGGER["Python CSV Logger"]
+  LOGGER --> CSV["CSV Log"]
+  CSV --> WEB["Django Web Monitor"]
+  CSV --> PC["PC<br/>CAN Sensor Viewer"]
 ```
 
 ## 簡易構成図
